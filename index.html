@@ -1,53 +1,46 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convertidor de Unidades</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Página con Botón</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #imagen {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Convertidor de Unidades</h1>
-        
-        <div class="converter-container">
-            <div class="input-group">
-                <label for="category">Categoría:</label>
-                <select id="category" onchange="updateUnitOptions()">
-                    <option value="length">Longitud</option>
-                    <option value="weight">Peso</option>
-                    <option value="volume">Volumen</option>
-                    <option value="area">Área</option>
-                    <option value="temperature">Temperatura</option>
-                </select>
-            </div>
-            
-            <div class="conversion-row">
-                <div class="input-group">
-                    <label for="inputValue">Valor:</label>
-                    <input type="number" id="inputValue" placeholder="Ingrese un valor" step="any">
-                </div>
-                
-                <div class="input-group">
-                    <label for="fromUnit">De:</label>
-                    <select id="fromUnit"></select>
-                </div>
-                
-                <div class="input-group">
-                    <label for="toUnit">A:</label>
-                    <select id="toUnit"></select>
-                </div>
-            </div>
-            
-            <button id="convertBtn" onclick="convert()">Convertir</button>
-            
-            <div class="result-container">
-                <h2>Resultado:</h2>
-                <div id="result">-</div>
-            </div>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
+    <button onclick="mostrarImagen()">clickaeame</button>
+    <img id="imagen" src="imagenes/imagen graciosa.jpg" alt="Imagen Graciosa">
+    <script>
+        function mostrarImagen() {
+            document.getElementById('imagen').style.display = 'block';
+            document.querySelector('button').style.display = 'none';
+            var audio = new Audio('Among Us Impostor.mp3');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
