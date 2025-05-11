@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Unidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Convertidor de Unidades</h1>
+        
+        <div class="converter-container">
+            <div class="input-group">
+                <label for="category">Categoría:</label>
+                <select id="category" onchange="updateUnitOptions()">
+                    <option value="length">Longitud</option>
+                    <option value="weight">Peso</option>
+                    <option value="volume">Volumen</option>
+                    <option value="area">Área</option>
+                    <option value="temperature">Temperatura</option>
+                </select>
+            </div>
+            
+            <div class="conversion-row">
+                <div class="input-group">
+                    <label for="inputValue">Valor:</label>
+                    <input type="number" id="inputValue" placeholder="Ingrese un valor" step="any">
+                </div>
+                
+                <div class="input-group">
+                    <label for="fromUnit">De:</label>
+                    <select id="fromUnit"></select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="toUnit">A:</label>
+                    <select id="toUnit"></select>
+                </div>
+            </div>
+            
+            <button id="convertBtn" onclick="convert()">Convertir</button>
+            
+            <div class="result-container">
+                <h2>Resultado:</h2>
+                <div id="result">-</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
