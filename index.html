@@ -1,46 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>XD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación</title>
     <style>
         body {
-            margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            margin: 0;
         }
-        #imagen {
-            display: none;
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-around;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #0056b3;
+        video {
+            width: 30%;
+            border: 2px solid #ccc;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <button onclick="mostrarImagen()">clickaeame</button>
-    <img id="imagen" src="imagenes/imagen graciosa.jpg" alt="Imagen Graciosa">
-    <script>
-        function mostrarImagen() {
-            document.getElementById('imagen').style.display = 'block';
-            document.querySelector('button').style.display = 'none';
-            var audio = new Audio('Among Us Impostor.mp3');
-            audio.play();
-        }
-    </script>
+    <div class="video-container">
+        <video src="videos/gatito comiendo.mp4" autoplay loop muted></video>
+    </div>
+    <h1>Hola Muchachos</h1>
+    <div class="video-container">
+        <video src="videos/gatito chill.mp4" autoplay loop muted></video>
+        <video src="videos/gatito chill.mp4" autoplay loop muted></video>
+    </div>
 </body>
 </html>
