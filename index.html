@@ -3,80 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Suma</title>
+    <title>Gatito Comiendo</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
         }
-        .calculator {
-            background-color: #f5f5f5;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
-        h1 {
-            color: #333;
-        }
-        .input-group {
-            margin: 15px 0;
-        }
-        input[type="number"] {
-            padding: 8px;
-            width: 100px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #result {
-            font-size: 24px;
-            margin-top: 20px;
-            font-weight: bold;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <div class="calculator">
-        <h1>Calculadora de Suma</h1>
-        <div class="input-group">
-            <label for="num1">Primer número:</label>
-            <input type="number" id="num1" placeholder="0">
-        </div>
-        <div class="input-group">
-            <label for="num2">Segundo número:</label>
-            <input type="number" id="num2" placeholder="0">
-        </div>
-        <button onclick="sumarNumeros()">Sumar</button>
-        <div id="result">Resultado: 0</div>
+    <div class="video-container">
+        <video src="videos/gatito comiendo.mp4" autoplay loop muted></video>
     </div>
-
-    <script>
-        function sumarNumeros() {
-            // Obtener los valores de los inputs
-            const num1 = parseFloat(document.getElementById('num1').value) || 0;
-            const num2 = parseFloat(document.getElementById('num2').value) || 0;
-            
-            // Calcular la suma
-            const suma = num1 + num2;
-            
-            // Mostrar el resultado
-            document.getElementById('result').textContent = 'Resultado: ' + suma;
-        }
-    </script>
 </body>
 </html>
